@@ -1,78 +1,181 @@
 * {
-    font-size: 16px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      width: 75%;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      border-radius: 8px;
-    }
-    h1 {
-      margin-bottom: 20px;
-    }
-    .time-input {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .time-input input {
-      width: 25%;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 75%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.time-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.time-input input {
+  width: 25%;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px;
+  color: #757575;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 4rem;
+  -moz-appearance: textfield;
+}
+
+.time-input input::-webkit-inner-spin-button,
+.time-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1.5rem 0.5rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#timer {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: 6rem;
+  margin: 3rem 0;
+}
+
+.negative {
+  color: red;
+}
+
+.titule {
+  font-size: 3rem;
+}
+
+/* MODO OSCURO */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .container {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #333;
+}
+
+.dark-mode button:hover {
+  background-color: #555;
+}
+
+/* BOTÓN MODO OSCURO */
+.dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.dark-mode .dark-mode-toggle {
+  color: #fff;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  #timer {
+      font-size: 4rem;
+  }
+
+  .titule {
+      font-size: 2.5rem;
+  }
+
+  .time-input input {
+      font-size: 1.5rem;
+      height: 3rem;
+  }
+
+  button {
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      width: 95%;
+      padding: 10px;
+  }
+
+  #timer {
+      font-size: 3rem;
+  }
+
+  .titule {
       font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      padding: 5px;
-      color:#757575
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      -moz-appearance: textfield; /* Ocultar flechas en Firefox */
-    }
-    input{
-        height: 4rem;
-    }
+  }
 
-    .time-input input::-webkit-inner-spin-button,
-    .time-input input::-webkit-outer-spin-button {
-      -webkit-appearance: none; /* Ocultar flechas en Chrome, Safari */
-      margin: 0;
-    }
-    button {
-      padding: 2rem 3rem;
-      font-size: 1rem;
-      color: white;
-      background-color: #007BFF;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 2rem 1rem;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #timer {
-        font-family: Arial, sans-serif;
-        font-weight: 900;
-        font-size: 10rem;
-        margin: 5rem 0;
-    }
-    .negative {
-      color: red;
-    }
+  .time-input {
+      flex-direction: column;
+      gap: 5px;
+  }
 
-    .titule{
-        font-size: 5rem;
-    }
+  .time-input input {
+      width: 80%;
+      font-size: 1.2rem;
+      height: 2.5rem;
+  }
+
+  button {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.8rem;
+  }
+}

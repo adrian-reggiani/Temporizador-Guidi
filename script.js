@@ -72,3 +72,20 @@ function toggleFullscreen() {
   }
 }
 
+// Verificar si el usuario tiene modo oscuro activado en localStorage
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+    }
+});
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Guardar en localStorage
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+    }
+}
