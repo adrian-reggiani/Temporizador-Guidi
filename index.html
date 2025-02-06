@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporizador de Discurso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="titule">Temporizador</h1>
+    <div id="timer">00:00:00</div>
+    <div class="time-input">
+      <input type="number" id="hoursInput" placeholder="HH" min="0" max="99">
+      <input type="number" id="minutesInput" placeholder="MM" min="0" max="59">
+      <input type="number" id="secondsInput" placeholder="SS" min="0" max="59">
+    </div>
+    <button onclick="startTimer()">Iniciar</button>
+    <button onclick="pauseTimer()">Pausar</button>
+    <button onclick="resetTimer()">Reiniciar</button>
+   <!--  <button onclick="toggleFullscreen()">Pantalla Completa</button> -->
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
