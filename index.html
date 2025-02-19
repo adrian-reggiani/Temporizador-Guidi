@@ -9,16 +9,17 @@
 <body>
   <div class="container">
     <h1 class="titule">Temporizador</h1>
-    <div id="timer">00:00:00</div>
+    <!-- <div id="timer">00:00:00</div> -->
+    <div id="timer">00:00</div>
     <div class="time-input">
-      <input type="number" id="hoursInput" placeholder="HH" min="0" max="99">
+      <!-- <input type="number" id="hoursInput" placeholder="HH" min="0" max="99"> -->
       <input type="number" id="minutesInput" placeholder="MM" min="0" max="59">
       <input type="number" id="secondsInput" placeholder="SS" min="0" max="59">
     </div>
-    <button onclick="startTimer()">Iniciar</button>
-    <button onclick="pauseTimer()">Pausar</button>
-    <button onclick="resetTimer()">Limpiar</button>
-   <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    <button id="iniciar" onclick="startTimer()">Iniciar</button>
+    <button id="pausar" onclick="pauseTimer()">Pausar</button>
+    <button onclick="clearTimer()">Limpiar</button>
+   <button class="dark-mode-toggle" onclick="toggleDarkMode()"><img src="/img/moon.svg" alt="Luna" width="24"></button>
 
   </div>
   <script src="script.js"></script>
