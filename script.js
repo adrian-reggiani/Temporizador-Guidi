@@ -72,6 +72,7 @@ function pauseTimer() { // Boton Pausa
 
 function clearTimer() { // Boton Limpiar
   clearInterval(timerInterval);
+  sonido.pause()
   timeInSeconds = 0;
   isRunning = false;
   isPaused = false;
