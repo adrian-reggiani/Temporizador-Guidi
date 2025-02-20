@@ -16,10 +16,21 @@
       <input type="number" id="minutesInput" placeholder="MM" min="0" max="59">
       <input type="number" id="secondsInput" placeholder="SS" min="0" max="59">
     </div>
-    <button id="iniciar" onclick="startTimer()">Iniciar</button>
-    <button id="pausar" onclick="pauseTimer()">Pausar</button>
-    <button onclick="clearTimer()">Limpiar</button>
-   <button class="dark-mode-toggle" onclick="toggleDarkMode()"><img src="/img/moon.svg" alt="Luna" width="50"></button>
+    <div class="botonera">
+      <div class="botonera-container">
+        <button id="iniciar" onclick="startTimer()">Iniciar</button>
+        <p>(Enter)</p>
+      </div>
+      <div class="botonera-container">
+        <button id="pausar" onclick="pauseTimer()">Pausar</button>
+        <p>(Espacio)</p>
+      </div>
+      <div class="botonera-container">
+        <button onclick="clearTimer()">Limpiar</button>
+        <p>(AltGr)</p>
+      </div>
+    </div>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()"><img src="/img/moon.svg" alt="Luna" width="50"></button>
 
   </div>
   <script src="script.js"></script>

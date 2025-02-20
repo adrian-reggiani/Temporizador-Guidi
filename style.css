@@ -56,6 +56,22 @@ h1 {
   margin: 0;
 }
 
+.botonera{
+  display: flex;
+  width: 100%;
+  align-items: center ;
+  justify-content: center;
+}
+
+.botonera-container button{
+  margin-bottom: 0.1rem;
+}
+
+.botonera-container p{
+  color: rgb(188, 187, 187);
+  font-weight: bold;
+}
+
 button {
   padding: 1.5rem 2rem;
   font-size: 1rem;
