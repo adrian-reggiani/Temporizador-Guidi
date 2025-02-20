@@ -1,10 +1,15 @@
+// Variables
 let timerInterval;
 let timeInSeconds = 0;
 let isRunning = false;
 let isPaused = false; // Nueva variable para saber si el temporizador está pausado
 
+// Botones 
 const btnIniciar = document.getElementById('iniciar');
 const btnPausar = document.getElementById('pausar');
+
+// Cargar el sonido
+const sonido = new Audio('./sound/despertador.mp3');
 
 function startTimer() { // Boton Iniciar
   const timerDisplay = document.getElementById("timer");
@@ -36,6 +41,7 @@ function startTimer() { // Boton Iniciar
   timerInterval = setInterval(() => {
     if (timeInSeconds < 0) {
       timerDisplay.classList.add("negative");
+      sonido.play(); // Reproducir el sonido cuando el temporizador llegue a 0
     } else {
       timerDisplay.classList.remove("negative");
     }
@@ -54,7 +60,7 @@ function startTimer() { // Boton Iniciar
 
 function pauseTimer() { // Boton Pausa
   if (!isRunning) return;
-
+  sonido.pause()
   clearInterval(timerInterval);
   isRunning = false;
   isPaused = true; // Marcamos que el temporizador está pausado
